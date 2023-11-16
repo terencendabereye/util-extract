@@ -5,20 +5,20 @@
 class Extract < Formula
   desc "file extractor"
   homepage "https://github.com/terencendabereye/util-extract"
-  version "0.1.2-rc1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.2-rc1/util-extract_Darwin_arm64.tar.gz"
-      sha256 "5572e2e0810ffefbc0ba0374cb2bd3fcc35fcfd6c9ce6569a88f7cbbf07283dd"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.2/util-extract_Darwin_arm64.tar.gz"
+      sha256 "2326a73d4ae77431385c1efe52c195eaf5a44808d60bd948b44bca4f4e78d533"
 
       def install
         bin.install "util-extract"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.2-rc1/util-extract_Darwin_x86_64.tar.gz"
-      sha256 "4cd290733d7dfa631438440269ee4a2306a70ebba28fb30b9903b7beb86923b1"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.2/util-extract_Darwin_x86_64.tar.gz"
+      sha256 "5c30512fde661dc484fe497b17b82a04a54406742c1e1da0c62931e17636e1e2"
 
       def install
         bin.install "util-extract"
@@ -28,16 +28,16 @@ class Extract < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.2-rc1/util-extract_Linux_arm64.tar.gz"
-      sha256 "2436d2ef1f48154596778a29e974535f37239f7702cebc51f1798bb2b8be86c4"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.2/util-extract_Linux_arm64.tar.gz"
+      sha256 "29130e698b5ddc5093984813d4f96882fbde193419bfdd14dc67649a8e4c2623"
 
       def install
         bin.install "util-extract"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.2-rc1/util-extract_Linux_x86_64.tar.gz"
-      sha256 "81d232da262266086f2f8914d4bff91e8b326e46c41b2e3364b27086397db506"
+      url "https://github.com/terencendabereye/util-extract/releases/download/v0.1.2/util-extract_Linux_x86_64.tar.gz"
+      sha256 "0a757bdbf721f23b0d99fe8c753ceed05127899446e2cd85990b6e0b58fdaa1f"
 
       def install
         bin.install "util-extract"
