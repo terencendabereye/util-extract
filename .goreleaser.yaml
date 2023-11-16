@@ -29,7 +29,7 @@ brews:
     # homepage: https://github.com/terencendabereye/util-extract
     description: "file extractor"
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
-    folder: formula-brew-extract
+    # folder: Formula
     # skip_upload: true
     repository:
       owner: terencendabereye
