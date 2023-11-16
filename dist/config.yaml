@@ -14,6 +14,7 @@ brews:
       email: bot@goreleaser.com
     commit_msg_template: Brew formula update for {{ .ProjectName }} version {{ .Tag }}
     description: file extractor
+    homepage: https://github.com/terencendabereye/util-extract
     goarm: "6"
     goamd64: v1
 builds:
