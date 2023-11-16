@@ -149,6 +149,7 @@ func main() {
 		}
 	}
 	c:= termColor.New(termColor.FgGreen)
-	c.Printf("Done\n");
+	fmt.Printf("__%s__\n", c.Sprint("Finished"));
+	// c.Printf("Finished\n");
 	// c.Printf("Finished\n");
 }
