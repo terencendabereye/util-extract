@@ -1,4 +1,4 @@
-dist/
+# dist/
 extract
 wget*
 go.sum
