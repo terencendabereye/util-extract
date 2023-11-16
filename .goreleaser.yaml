@@ -14,8 +14,10 @@ before:
     - go mod tidy
 
 builds:
-  - env:
+  - 
+    env:
       - CGO_ENABLED=0
+    binary: extract
     goos:
       - linux
       - windows
@@ -28,12 +30,10 @@ brews:
     description: "file extractor"
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
     # skip_upload: true
-    folder: Formula
+    folder: Formulas
     repository:
       owner: terencendabereye
-      name: util-extract
-    install: |
-      bin.install "extract"
+      name: my-remote-brew-tap
 
 archives:
   - format: tar.gz
