@@ -31,7 +31,9 @@ brews:
     folder: Formula
     repository:
       owner: terencendabereye
-      name: extract
+      name: util-extract
+    install: |
+      bin.install "extract"
 
 archives:
   - format: tar.gz
