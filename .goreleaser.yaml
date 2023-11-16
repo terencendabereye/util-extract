@@ -12,28 +12,29 @@ before:
   hooks:
     # You may remove this if you don't use go modules.
     - go mod tidy
+project_name: util-enable
 
 builds:
   - 
     env:
       - CGO_ENABLED=0
-    binary: extract
+    # binary: extract
     goos:
-      - linux
-      - windows
+      # - linux
+      # - windows
       - darwin
-# release:
 brews:
   -
     name: extract
-    homepage: https://github.com/terencendabereye/util-extract
+    # homepage: https://github.com/terencendabereye/util-extract
     description: "file extractor"
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
+    folder: formula-brew-extract
     # skip_upload: true
-    folder: Formulas
     repository:
       owner: terencendabereye
       name: my-remote-brew-tap
+    
 
 archives:
   - format: tar.gz
