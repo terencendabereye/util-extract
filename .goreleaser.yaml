@@ -27,7 +27,11 @@ brews:
     homepage: https://github.com/terencendabereye/util-extract
     description: "file extractor"
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
-    skip_upload: true
+    # skip_upload: true
+    folder: Formula
+    repository:
+      owner: terencendabereye
+      name: util-extract
 
 archives:
   - format: tar.gz
