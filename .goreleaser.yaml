@@ -20,6 +20,11 @@ builds:
       - linux
       - windows
       - darwin
+# release:
+brews:
+  # name: extract
+  # url: https://github.com/terencendabereye/util-extract
+  # description: "file extractor"
 
 archives:
   - format: tar.gz
