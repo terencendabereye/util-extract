@@ -12,17 +12,8 @@ import (
 	"strings"
 
 	termColor "github.com/fatih/color"
-	"github.com/spf13/cobra"
 	"golang.org/x/term"
 )
-
-var rootCmd = cobra.Command {
-	Use: "execute",
-	Run: func(cmd *cobra.Command, args []string) {
-		runExtract()
-	},
-	Version: "1.14",
-}
 
 func extractTarGz(filename string) error {
 	file, err := os.Open(filename)
@@ -74,7 +65,7 @@ func extractTarGz(filename string) error {
 		if err != nil {
 			terminalWidth = 0
 		}
-		c:= termColor.New(termColor.FgYellow)
+		c := termColor.New(termColor.FgYellow)
 		fmt.Printf("\r%s", strings.Repeat(" ", terminalWidth))
 		fmt.Printf("\rExtracting %s...", c.Sprint(header.Name))
 	}
@@ -157,8 +148,8 @@ func runExtract() {
 			}
 		}
 	}
-	c:= termColor.New(termColor.FgGreen)
-	fmt.Printf("%s\n", c.Sprint("Finished"));
+	c := termColor.New(termColor.FgGreen)
+	fmt.Printf("%s\n", c.Sprint("Finished"))
 	// c.Printf("Finished\n");
 	// c.Printf("Finished\n");
 }

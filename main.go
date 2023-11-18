@@ -1,18 +1,18 @@
+/*
+Copyright © 2023 NAME HERE <EMAIL ADDRESS>
+*/
 package main
 
 import (
 	"extract/cmd"
-
-	"os"
 )
 
-// import "cmd"
 var (
 	version string
 )
-
+func init() {
+	cmd.AppVersion = version
+}
 func main() {
-	os.Setenv("VERSION_NUMBER", version)
-	cmd.Extract()
-	// fmt.Printf("version=%s build=%s\n", version, date)
+	cmd.Execute()
 }

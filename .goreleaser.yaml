@@ -19,9 +19,10 @@ builds:
     env:
       - CGO_ENABLED=0
     binary: extract
+    
     goos:
-      # - linux
-      # - windows
+      - linux
+      - windows
       - darwin
 brews:
   -
@@ -30,6 +31,7 @@ brews:
     description: "file extractor"
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
     folder: Formula
+    
     # skip_upload: true
     repository:
       owner: terencendabereye
