@@ -150,10 +150,5 @@ func runExtract() {
 	}
 	c := termColor.New(termColor.FgGreen)
 	fmt.Printf("%s\n", c.Sprint("Finished"))
-	// c.Printf("Finished\n");
-	// c.Printf("Finished\n");
-}
 
-func Extract() {
-	rootCmd.Execute()
 }
