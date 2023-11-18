@@ -6,13 +6,15 @@
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
 # vim: set ts=2 sw=2 tw=0 fo=cnqoj
 
-version: 0.1
+# version: 0.1
 
-before:
+env:
+  - GITHUB_TOKEN=""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"
+before:  
   hooks:
-    # You may remove this if you don't use go modules.
     - go mod tidy
-project_name: util-enable
+    - ./version_setter.sh
+project_name: file-extraction-utility
 
 builds:
   - 
@@ -31,13 +33,17 @@ brews:
     description: "file extractor"
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
     folder: Formula
-    
     # skip_upload: true
     repository:
       owner: terencendabereye
       name: homebrew-remote-brew-tap
     
-
+release:
+  mode: keep-existing
+  prerelease: auto
+  github:
+    owner: terencendabereye
+    name: util-extract
 archives:
   - format: tar.gz
     # this name template makes the OS and Arch compatible with the results of `uname`.

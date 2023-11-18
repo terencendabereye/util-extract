@@ -35,7 +35,7 @@ func Execute() {
 	}
 }
 
-var AppVersion = "TODO"
+var AppVersion = "v0.2.0"
 
 func init() {
 	rootCmd.Version = AppVersion
