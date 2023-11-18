@@ -5,5 +5,8 @@
 set VER $(git describe --tags)
 
 sed -E -i "" \
-'s/v[0-9]\.[0-9]\.[0-9](-[0-9a-zA-Z]+)?/'$VER'/g' \
+'s/v[0-9]\.[0-9]\.[0-9](-[0-9a-zA-Z]+)*/'$VER'/g' \
 "cmd/version.go"
+# sed -E -i "" \
+# 's/v[0-9]\.[0-9]\.[0-9](-[0-9a-zA-Z]+)?/v1.2.3/g' \
+# "cmd/version.go"
