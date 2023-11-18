@@ -9,26 +9,24 @@
 # version: 0.1
 
 env:
-  - GITHUB_TOKEN=""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"
-before:  
+  - GITHUB_TOKEN="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"
+before:
   hooks:
     - go mod tidy
     - ./version_setter.sh
 project_name: file-extraction-utility
 
 builds:
-  - 
-    env:
+  - env:
       - CGO_ENABLED=0
     binary: extract
-    
+
     goos:
       - linux
       - windows
       - darwin
 brews:
-  -
-    name: extract
+  - name: extract
     homepage: https://github.com/terencendabereye/util-extract
     description: "file extractor"
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
@@ -37,7 +35,7 @@ brews:
     repository:
       owner: terencendabereye
       name: homebrew-remote-brew-tap
-    
+
 release:
   mode: keep-existing
   prerelease: auto
