@@ -154,8 +154,8 @@ func runExtract_old() {
 
 }
 
-func runExtract() {
-	for _,v:= range os.Args[1:] {
+func runExtract(args []string) {
+	for _,v:= range args {
 		if e:=Extract(v); e!=nil {
 			log.Fatal(e)
 		}
