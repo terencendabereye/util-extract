@@ -27,6 +27,7 @@ builds:
 universal_binaries:
   - 
     replace: true
+    name_template: extract
 brews:
   - name: extract
     homepage: https://github.com/terencendabereye/util-extract
