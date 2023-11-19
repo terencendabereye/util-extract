@@ -1,3 +1,3 @@
 package cmd
 
-var AppVersion  = "v0.2.4"
+var AppVersion  = "v0.2.5"
