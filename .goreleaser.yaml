@@ -30,6 +30,7 @@ brews:
     description: "file extractor"
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
     folder: Formula
+    license: MIT
     # skip_upload: true
     repository:
       owner: terencendabereye
