@@ -24,6 +24,9 @@ builds:
       - linux
       - windows
       - darwin
+universal_binaries:
+  - 
+    replace: true
 brews:
   - name: extract
     homepage: https://github.com/terencendabereye/util-extract
