@@ -6,6 +6,7 @@ import (
 	"compress/gzip"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -127,7 +128,7 @@ func extractZip(filename string) error {
 	return nil
 }
 
-func runExtract() {
+func runExtract_old() {
 	for _, arg := range os.Args[1:] {
 		switch {
 		case strings.HasSuffix(arg, ".tar.gz"):
@@ -151,4 +152,21 @@ func runExtract() {
 	c := termColor.New(termColor.FgGreen)
 	fmt.Printf("%s\n", c.Sprint("Finished"))
 
+}
+
+func runExtract(args []string) {
+	for _,v:= range args {
+		if e:=Extract(v); e!=nil {
+			log.Fatal(e)
+		}
+	}
+}
+
+func Extract(filename string) error {
+	command := exec.Command("tar", "-xf", filename)
+	if e := command.Run(); e != nil {
+		return e
+	}
+
+	return nil
 }

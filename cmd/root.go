@@ -18,7 +18,7 @@ var rootCmd = &cobra.Command{
 	Args:  cobra.MinimumNArgs(1),
 	ValidArgs: []string{"filename ..."},
 	Run: func(cmd *cobra.Command, args []string) {
-		runExtract()
+		runExtract(args)
 	},
 }
 
